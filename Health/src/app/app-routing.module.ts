@@ -17,7 +17,7 @@ const routes: Routes = [
     {path: 'index', component: HomeComponent},
     {path: 'about-us', component: AboutPageComponent},
     {path: 'doctors', component: DoctorsPageComponent},
-    {path: 'doctor-details', component: DoctorDetailsPageComponent},
+    {path: 'doctor-details/:id', component: DoctorDetailsPageComponent},
     {path: 'services', component: ServicesPageComponent},
     {path: 'appointment', component: AppointmentPageComponent, canActivate:[loginGuardGuard]},
     {path: 'login', component: LoginPageComponent},
