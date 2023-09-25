@@ -1,0 +1,81 @@
+<!-- Page Banner -->
+<div class="page-banner-area ptb-100">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>Register</h2>
+            <ul class="pages-list">
+                <li><a routerLink="/index">Home</a></li>
+                <li>Register</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Register -->
+<div class="register-area ptb-100">
+    <div class="container">
+        <div class="register-form">
+            <h4>Create Your Account</h4>
+            <form [formGroup]="form"
+            (ngSubmit)="addRegister()">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" placeholder="Username" formControlName="Name">
+                    <div class="error-message" *ngIf="form.get('Name')?.hasError('required') && form.get('Name')?.touched">
+                        Name is required.
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" placeholder="Username" formControlName="Username">
+                    <div class="error-message" *ngIf="form.get('Username')?.hasError('required') && form.get('Username')?.touched">
+                        Username is required.
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" placeholder="Email address" formControlName="Email">
+                    <div class="error-message" *ngIf="form.get('Email')?.hasError('required') && form.get('Email')?.touched">
+                        Email is required.
+                      </div>
+                      <div class="error-message" *ngIf="form.get('Email')?.hasError('email') && form.get('Email')?.touched">
+                        Invalid email format.
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="number" class="form-control" placeholder="Phone" formControlName="Phone">
+                    <div class="error-message" *ngIf="form.get('Phone')?.hasError('required') && form.get('Phone')?.touched">
+                        Valid phone number is required.
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password" formControlName="Password">
+                    <div class="error-message" *ngIf="form.get('Password')?.hasError('required') && form.get('Password')?.touched">
+                        Password is required.
+                      </div>
+                      <div class="error-message" *ngIf="form.get('Password')?.hasError('pattern') && form.get('Password')?.touched">
+                        Password minimum length is 8 characters.
+                        Password characters must include upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & ).
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label>Confirm password</label>
+                    <input type="password" class="form-control" placeholder="Confirm password" formControlName="ConfirmPassword">
+                    <div class="error-message" *ngIf="form.get('ConfirmPassword')?.hasError('required') && form.get('ConfirmPassword')?.touched">
+                        Password is required.
+                      </div>
+                    <div class="error-message" *ngIf="form.value.Password != form.value.ConfirmPassword && form.get('ConfirmPassword')?.touched">
+                        Password is not matched.
+                      </div>
+                </div>
+                <p class="description">The password should be at least eight characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ &amp; )</p>
+                <button type="submit" class="default-btn" [disabled]="form.invalid || form.value.Password != form.value.ConfirmPassword">Create Account</button>
+                <div class="account-text">
+                    <span>Already have an account? <a routerLink="/login">Login</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

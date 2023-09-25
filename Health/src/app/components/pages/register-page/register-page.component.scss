@@ -1,0 +1,113 @@
+.register-form {
+    padding: 50px;
+    max-width: 600px;
+    border-radius: 5px;
+    transition: var(--transition);
+    background-color: var(--white-color);
+    border: 1px solid var(--white-color);
+    box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    h4 {
+        margin-bottom: 12px;
+        font: {
+            size: 25px;
+            weight: 500;
+        };
+    }
+    form {
+        margin-top: 5px;
+
+        .form-group {
+            margin-bottom: 20px;
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                color: var(--black-color);
+                font: {
+                    weight: 500;
+                    size: 15px;
+                };
+            }
+            .form-control {
+                background-color: transparent;
+                transition: var(--transition);
+                font-size: var(--font-size);
+                border: 1px solid #e1e1e1;
+                color: var(--black-color);
+                line-height: initial;
+                padding: 15px 18px;
+                border-radius: 5px;
+                box-shadow: unset;
+                height: 55px;
+
+                &::placeholder {
+                    color: var(--paragraph-color);
+                }
+                &:focus {
+                    border-color: var(--main-color);
+
+                    &::placeholder {
+                        color: transparent;
+                        transition: var(--transition);
+                    }
+                }
+            }
+        }
+        .description {
+            margin-bottom: 0;
+            font: {
+                style: italic;
+                size: 14px;
+            };
+        }
+        .default-btn {
+            margin-top: 20px;
+            padding: {
+                left: 35px;
+                right: 35px;
+            };
+        }
+        .button:disabled,
+                button[disabled]{
+
+                  background-color: #cccccc;
+                  color: #666666;
+                }
+                .default-btn:focus{
+                    background-color: #124390;
+                }
+        .account-text {
+            margin-top: 20px;
+
+            span {
+                color: var(--paragraph-color);
+
+                a {
+                    color: var(--main-color);
+                }
+            }
+        }
+    }
+    &:hover {
+        border-color: var(--main-color);
+    }
+}
+.error-message{
+    color: rgb(250, 129, 129);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

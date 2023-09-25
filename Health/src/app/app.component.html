@@ -1,0 +1,4 @@
+<app-header [ngClass]="{'d-none': router.url === '/coming-soon'}"></app-header>
+<router-outlet></router-outlet>
+<app-footer [ngClass]="{'d-none': router.url === '/coming-soon'}"></app-footer>
+<ngx-scrolltop [ngClass]="{'d-none': router.url === '/coming-soon'}"></ngx-scrolltop>
