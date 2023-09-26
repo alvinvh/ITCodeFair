@@ -1,9 +1,9 @@
-.dentist-details-image {
+.doctor-details-image {
     img {
         border-radius: 10px;
     }
 }
-.dentist-details-content {
+.doctor-details-content {
     padding-left: 15px;
 
     h3 {
@@ -55,7 +55,7 @@
         }
     }    
 }
-.dentist-details-overview-content {
+.doctor-details-overview-content {
     margin-top: 25px;
 
     .details-overview-image {
@@ -83,4 +83,8 @@
             }
         }
     }   
+}
+.default-btn{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
