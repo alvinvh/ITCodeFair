@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code Fair Project .NET\\ITCodeFair\\TeleMediCare\\TeleMediCare.csproj",
-      "projectName": "TeleMediCare",
-      "projectPath": "D:\\Code Fair Project .NET\\ITCodeFair\\TeleMediCare\\TeleMediCare.csproj",
+      "projectUniqueName": "D:\\Code Fair Project .NET\\ITCodeFair\\WebApplicationLayer\\WebApplicationLayer.csproj",
+      "projectName": "WebApplicationLayer",
+      "projectPath": "D:\\Code Fair Project .NET\\ITCodeFair\\WebApplicationLayer\\WebApplicationLayer.csproj",
       "packagesPath": "C:\\Users\\Shiva Gupta\\.nuget\\packages\\",
-      "outputPath": "D:\\Code Fair Project .NET\\ITCodeFair\\TeleMediCare\\obj\\",
+      "outputPath": "D:\\Code Fair Project .NET\\ITCodeFair\\WebApplicationLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Shiva Gupta\\AppData\\Roaming\\NuGet\\NuGet.Config"

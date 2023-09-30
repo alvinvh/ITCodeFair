@@ -1,4 +1,4 @@
-namespace TeleMediCare.Models;
+namespace WebApplicationLayer.Models;
 
 public class ErrorViewModel
 {
