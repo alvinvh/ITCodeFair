@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using TeleMediCare.Models;
+using WebApplicationLayer.Models;
 
-namespace TeleMediCare.Controllers;
+namespace WebApplicationLayer.Controllers;
 
 public class HomeController : Controller
 {
