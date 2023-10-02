@@ -34,6 +34,8 @@ import { ForgotPasswordPageComponent } from './components/pages/forgot-password-
 import { AboutPageComponent } from './components/pages/about-page/about-page.component';
 import { DoctorsPageComponent } from './components/pages/doctors-page/doctors-page.component';
 import { DoctorDetailsPageComponent } from './components/pages/doctor-details-page/doctor-details-page.component';
+import { AppointmentDoctorComponent } from './components/common/appointment-doctor/appointment-doctor.component';
+import { DoctorDialogComponent } from './components/common/appointment-doctor/doctor-dialog/doctor-dialog.component';
 
 @NgModule({
     declarations: [
@@ -58,6 +60,8 @@ import { DoctorDetailsPageComponent } from './components/pages/doctor-details-pa
         AboutPageComponent,
         DoctorsPageComponent,
         DoctorDetailsPageComponent,
+        AppointmentDoctorComponent,
+        DoctorDialogComponent,
     ],
     imports: [
         BrowserModule,

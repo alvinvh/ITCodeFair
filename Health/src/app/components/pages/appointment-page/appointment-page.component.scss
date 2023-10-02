@@ -1,0 +1,20 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.appointment{
+    width: 100%;
+    flex: 1;
+    .left-appointment{
+        width: 50%;
+        float: left;
+    }
+    .right-appointment{
+        width: 50%;
+        float: right;
+    }
+}
+.features{
+    flex: 0;
+    
+}

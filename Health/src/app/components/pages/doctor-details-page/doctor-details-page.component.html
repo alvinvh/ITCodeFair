@@ -27,7 +27,7 @@
                 <div class="doctor-details-content">
                     <h3>{{doctorDetails.name}}</h3>
                     <span class="designation">{{doctorDetails.specialist}}</span>
-                    <button type="button" class="default-btn" routerLink="/appointment" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <button type="button" class="default-btn" routerLink="/appointment/{{doctorDetails.id}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                         Book Appointment
                     </button>
                     <div class="content-overview">

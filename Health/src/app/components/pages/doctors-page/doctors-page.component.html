@@ -26,7 +26,7 @@
                         </h3>
                         <span>{{doctor.specialist}}</span>
                         <div>
-                        <button type="button" class="default-btn" routerLink="/appointment" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <button type="button" class="default-btn" routerLink="/appointment/{{doctor.id}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                             Book Appointment
                         </button>
                     </div>
