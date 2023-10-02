@@ -16,7 +16,6 @@ export class DoctorDetailsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.doctorID = this.route.snapshot.paramMap.get('id');
-    console.log(this.doctorID)
     for (let doctor of this.doctorList.getDoctorsList()){
       if(doctor.id === Number(this.doctorID)){
         this.doctorDetails = doctor;

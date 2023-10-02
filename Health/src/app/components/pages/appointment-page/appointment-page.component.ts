@@ -13,5 +13,5 @@ export class AppointmentPageComponent implements OnInit {
   ngOnInit(): void {
     this.doctorID = this.route.snapshot.paramMap.get('id');
   }
-
+  
 }
