@@ -1,2 +1,0 @@
-This text file was created so that the folders would be visible on GitHub otherwise the folder structure is invisible. 
-Please delete this file when adding other files to the folder. 
