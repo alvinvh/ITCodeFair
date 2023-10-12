@@ -2804,6 +2804,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.12",
           "Microsoft.AspNetCore.Authentication.Negotiate": "7.0.12",
           "Microsoft.AspNetCore.Identity.UI": "7.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.12",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.10",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.12"
