@@ -10,3 +10,5 @@ D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\obj\Debug\net7.0\DataAccess
 D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\obj\Debug\net7.0\refint\DataAccessLayer.dll
 D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.pdb
 D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\obj\Debug\net7.0\ref\DataAccessLayer.dll
+D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.runtimeconfig.json
+D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.genruntimeconfig.cache

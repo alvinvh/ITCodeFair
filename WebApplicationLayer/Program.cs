@@ -1,5 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using DataAccessLayer.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
+var connection = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AuthDbContext>(options => options.UseSqlServer(connection, b => b.MigrationsAssembly("DataAccessLayer")));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
