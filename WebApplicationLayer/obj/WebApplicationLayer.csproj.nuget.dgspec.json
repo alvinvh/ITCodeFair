@@ -232,6 +232,10 @@
               "target": "Package",
               "version": "[7.0.10, )"
             },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
             "microsoft.aspnetcore.identity": {
               "target": "Package",
               "version": "[2.2.0, )"

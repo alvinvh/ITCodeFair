@@ -272,3 +272,7 @@ D:\Code Fair Project .NET\ITCodeFair\WebApplicationLayer\bin\Debug\net7.0\DataAc
 D:\Code Fair Project .NET\ITCodeFair\WebApplicationLayer\bin\Debug\net7.0\DataAccessLayer.pdb
 D:\Code Fair Project .NET\ITCodeFair\WebApplicationLayer\bin\Debug\net7.0\BusinessLogicLayer.dll
 D:\Code Fair Project .NET\ITCodeFair\WebApplicationLayer\bin\Debug\net7.0\BusinessLogicLayer.pdb
+D:\Code Fair Project .NET\ITCodeFair\WebApplicationLayer\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\Code Fair Project .NET\ITCodeFair\WebApplicationLayer\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Code Fair Project .NET\ITCodeFair\WebApplicationLayer\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Code Fair Project .NET\ITCodeFair\WebApplicationLayer\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll

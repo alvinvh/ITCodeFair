@@ -1,15 +1,40 @@
 using Microsoft.EntityFrameworkCore;
-using DataAccessLayer.Context;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connection = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<AuthDbContext>(options => options.UseSqlServer(connection, b => b.MigrationsAssembly("DataAccessLayer")));
-// Add services to the container.
+// builder.Services.AddDbContext<AuthDbContext>(options => options.UseSqlServer(connection, b => b.MigrationsAssembly("DataAccessLayer")));
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+.AddCookie(options =>
+{
+    options.Events.OnRedirectToLogin = (context) =>
+    {
+        // 401 - Unauthorised response 
+        context.Response.StatusCode = 401;
+        return Task.CompletedTask;
+    };
+});
+
+
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        options.RoutePrefix = string.Empty;
+    });
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -24,6 +49,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
