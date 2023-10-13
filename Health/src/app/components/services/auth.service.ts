@@ -19,7 +19,7 @@ export class AuthService {
 
   logout(){
     this.loggedIn = false;
-    localStorage.removeItem(this.username);
+    localStorage.clear()
   }
 
   isAuthenticated(){

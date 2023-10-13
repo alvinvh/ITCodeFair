@@ -11,6 +11,7 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { ServicesPageComponent } from './components/pages/services-page/services-page.component';
 import { loginGuardGuard } from './components/guard/login-guard.guard';
+import { DashboardUserComponent } from './components/pages/dashboard-user/dashboard-user.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path: 'login', component: LoginPageComponent},
     {path: 'register', component: RegisterPageComponent},
     {path: 'forgot-password', component: ForgotPasswordPageComponent},
+    {path: 'user-dashboard', component: DashboardUserComponent},
     // Here add new pages component
 
     {path: '**', component: NotFoundComponent} // This line will remain down from the whole pages component list

@@ -34,8 +34,16 @@ import { ForgotPasswordPageComponent } from './components/pages/forgot-password-
 import { AboutPageComponent } from './components/pages/about-page/about-page.component';
 import { DoctorsPageComponent } from './components/pages/doctors-page/doctors-page.component';
 import { DoctorDetailsPageComponent } from './components/pages/doctor-details-page/doctor-details-page.component';
-import { AppointmentDoctorComponent } from './components/common/appointment-doctor/appointment-doctor.component';
-import { DoctorDialogComponent } from './components/common/appointment-doctor/doctor-dialog/doctor-dialog.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { DatePipe } from '@angular/common';
+import { DashboardUserComponent } from './components/pages/dashboard-user/dashboard-user.component';
+import { TableComponent } from './components/pages/dashboard-user/table/table.component';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
     declarations: [
@@ -60,8 +68,8 @@ import { DoctorDialogComponent } from './components/common/appointment-doctor/do
         AboutPageComponent,
         DoctorsPageComponent,
         DoctorDetailsPageComponent,
-        AppointmentDoctorComponent,
-        DoctorDialogComponent,
+        DashboardUserComponent,
+        TableComponent,
     ],
     imports: [
         BrowserModule,
@@ -79,8 +87,15 @@ import { DoctorDialogComponent } from './components/common/appointment-doctor/do
         HttpClientModule,
         ReactiveFormsModule,
         BsDropdownModule.forRoot(),
+        MatStepperModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatTableModule,
+        MatSortModule,
+        MatPaginatorModule
     ],
-    providers: [],
+    providers: [DatePipe],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

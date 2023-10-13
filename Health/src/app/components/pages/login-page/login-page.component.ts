@@ -25,6 +25,7 @@ export class LoginPageComponent implements OnInit {
   login(){
     this.loginService.login(this.form.value.Email, this.form.value.Password);
     if (this.loginService.isAuthenticated()){
+      localStorage.setItem('userName',this.form.value.Email)
       this.router.navigate(['/index'])
     }
     else{

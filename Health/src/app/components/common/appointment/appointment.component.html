@@ -1,162 +1,435 @@
 <div class="appointment-area bg-image ptb-100 d-none d-block">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <div class="appointment-form">
-                    <h4>
-                        <i class="flaticon-170-calendar-1"></i>
-                        Make An Appointment
-                    </h4>
-                    <form [formGroup]="form" (ngSubmit)="addAppointment()">
-                        <div class="form-group">
-                            <input
-                                type="text"
-                                class="form-control"
-                                placeholder="Name"
-                                formControlName="Name"
-                            />
-                            <div
-                                class="error-message"
-                                *ngIf="
-                                    form.get('Name')?.hasError('required') &&
-                                    form.get('Name')?.touched
-                                "
-                            >
-                                Name is required.
-                            </div>
+        <div class="appointment-form">
+            <h4>
+                <i class="flaticon-170-calendar-1"></i>
+                Make An Appointment
+            </h4>
+            <mat-stepper
+                class="example-stepper"
+                [linear]="true"
+                [orientation]="(stepperOrientation | async)!"
+            >
+                <mat-step
+                    [stepControl]="form"
+                    label="Doctor and Details"
+                    class="appointment-area"
+                >
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12">
+                            <form [formGroup]="form">
+                                <h4 class="no-padding">Enter Your Details</h4>
+                                <div class="form-group">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Name"
+                                        formControlName="Name"
+                                    />
+                                    <div
+                                        class="error-message"
+                                        *ngIf="
+                                            form
+                                                .get('Name')
+                                                ?.hasError('required') &&
+                                            form.get('Name')?.touched
+                                        "
+                                    >
+                                        Name is required.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        placeholder="Email"
+                                        formControlName="Email"
+                                    />
+                                    <div
+                                        class="error-message"
+                                        *ngIf="
+                                            form
+                                                .get('Email')
+                                                ?.hasError('required') &&
+                                            form.get('Email')?.touched
+                                        "
+                                    >
+                                        Email is required.
+                                    </div>
+                                    <div
+                                        class="error-message"
+                                        *ngIf="
+                                            form
+                                                .get('Email')
+                                                ?.hasError('email') &&
+                                            form.get('Email')?.touched
+                                        "
+                                    >
+                                        Invalid email format.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        placeholder="Phone"
+                                        formControlName="Phone"
+                                    />
+                                    <div
+                                        class="error-message"
+                                        *ngIf="
+                                            form
+                                                .get('Phone')
+                                                ?.hasError('required') &&
+                                            form.get('Phone')?.touched
+                                        "
+                                    >
+                                        Phone number is required.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea
+                                        formControlName="Message"
+                                        class="form-control"
+                                        cols="30"
+                                        rows="4"
+                                        placeholder="Message"
+                                    ></textarea>
+                                    <div
+                                        class="error-message"
+                                        *ngIf="
+                                            form
+                                                .get('Message')
+                                                ?.hasError('required') &&
+                                            form.get('Message')?.touched
+                                        "
+                                    >
+                                        Message is required.
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <input
-                                type="email"
-                                class="form-control"
-                                placeholder="Email"
-                                formControlName="Email"
-                            />
-                            <div
-                                class="error-message"
-                                *ngIf="
-                                    form.get('Email')?.hasError('required') &&
-                                    form.get('Email')?.touched
-                                "
-                            >
-                                Email is required.
-                            </div>
-                            <div
-                                class="error-message"
-                                *ngIf="
-                                    form.get('Email')?.hasError('email') &&
-                                    form.get('Email')?.touched
-                                "
-                            >
-                                Invalid email format.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input
-                                type="number"
-                                class="form-control"
-                                placeholder="Phone"
-                                formControlName="Phone"
-                            />
-                            <div
-                                class="error-message"
-                                *ngIf="
-                                    form.get('Phone')?.hasError('required') &&
-                                    form.get('Phone')?.touched
-                                "
-                            >
-                                Phone number is required.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input
-                                type="text"
-                                class="form-control"
-                                bsDatepicker
-                                [(bsValue)]="mytime"
-                                value="{{ mytime | date : 'dd-MM-yyyy' }}"
-                                formControlName="Date"
-                                [minDate]="mindate"
-                                placeholder="Date"
-                            />
-                            <div
-                                class="error-message"
-                                *ngIf="
-                                    form.get('Date')?.hasError('required') &&
-                                    form.get('Date')?.touched
-                                "
-                            >
-                                Appointment date is required.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <button
-                                type="button"
-                                class="default-btn"
-                                *ngFor="let time of timeList"
-                                [disabled]="!time.availability"
-                                (click)="setTime(time.time)"
-                                [ngClass]="
-                                    time.time === selectedTime ? 'selected' : ''
-                                "
-                            >
-                                {{ time.time }}
-                            </button>
-                            <div
-                                class="error-message"
-                                *ngIf="
-                                    form.get('Time')?.hasError('required') &&
-                                    form.get('Time')?.touched
-                                "
-                            >
-                                Appointment time is required.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea
-                                formControlName="Message"
-                                class="form-control"
-                                cols="30"
-                                rows="4"
-                                placeholder="Message"
-                            ></textarea>
-                            <div
-                                class="error-message"
-                                *ngIf="
-                                    form.get('Message')?.hasError('required') &&
-                                    form.get('Message')?.touched
-                                "
-                            >
-                                Message is required.
+                        <div class="col-lg-6 col-md-12">
+                            <div class="appointment-doctor">
+                                <h4 class="no-padding">Selected Doctor</h4>
+                                <div
+                                    class="error-message"
+                                    *ngIf="
+                                        form
+                                            .get('Doctor')
+                                            ?.hasError('required') &&
+                                        form.get('Doctor')?.touched
+                                    "
+                                >
+                                    Please Select a Doctor
+                                </div>
+                                <div *ngIf="selectedDoctor">
+                                    <div class="doctor-card">
+                                        <a
+                                            routerLink="/doctor-details/{{
+                                                doctor.id
+                                            }}"
+                                            class="d-block"
+                                        >
+                                            <img
+                                                src="assets/images/doctor/{{
+                                                    doctor.image
+                                                }}"
+                                            />
+                                        </a>
+                                        <div class="doctor-content">
+                                            <h3>
+                                                <a
+                                                    routerLink="/doctor-details/{{
+                                                        doctor.id
+                                                    }}"
+                                                    >{{ doctor.name }}</a
+                                                >
+                                            </h3>
+                                            <span>{{ doctor.specialist }}</span>
+                                            <div>
+                                                <button
+                                                    type="button"
+                                                    class="default-btn"
+                                                    (click)="
+                                                        openDoctorDialog(
+                                                            template
+                                                        )
+                                                    "
+                                                >
+                                                    Change Doctor
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="button-area">
+                                    <button
+                                        *ngIf="!selectedDoctor"
+                                        type="button"
+                                        class="default-btn"
+                                        (click)="openDoctorDialog(template)"
+                                    >
+                                        Select a Doctor
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <button
-                            type="submit"
                             class="default-btn"
                             [disabled]="form.invalid"
+                            matStepperNext
                         >
-                            Book Appointment
+                            Next
                         </button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="appointment-doctor">
-                    <h4>Selected Doctor</h4>
-                    <div
+                    </div>
+                </mat-step>
+                <mat-step
+                    [stepControl]="dateFormGroup"
+                    label="Date and Time of Appointment"
+                >
+                    <form [formGroup]="dateFormGroup">
+                        
+                        <div class="card booking-schedule schedule-widget">
+                            <div class="schedule-header">
+                                <div class="align-items-center">
+                                    <div class="flex-container">
+                                        <ul class="horizontal-list">
+                                            <li class="left-arrow">
+                                                <i
+                                                    class="flaticon-011-chevron-1"
+                                                    (click)="getDaysLastWeek()"
+                                                ></i>
+                                            </li>
+                                            <li
+                                                *ngFor="
+                                                    let day of getDaysBetween(
+                                                        minDate,
+                                                        maxDate
+                                                    )
+                                                "
+                                            >
+                                                <span>{{
+                                                    day | date : "EEE"
+                                                }}</span
+                                                ><span class="date">{{
+                                                    day | date : "d MMM"
+                                                }}</span>
+                                            </li>
+                                            <li class="right-arrow">
+                                                <i
+                                                    class="flaticon-010-chevron"
+                                                    (click)="getDaysNextWeek()"
+                                                ></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-container">
+                                <ul class="horizontal-time">
+                                    <li>
+                                        <span
+                                            *ngFor="let time of timeList"
+                                            [hidden]="!time.availability"
+                                            [ngClass]="
+                                                selectedTime === time.time &&
+                                                selectRow === 1
+                                                    ? 'selected'
+                                                    : ''
+                                            "
+                                            (click)="clickTime(1, time.time)"
+                                            >{{ time.time }}</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <span
+                                            *ngFor="let time of timeList"
+                                            [hidden]="!time.availability"
+                                            [ngClass]="
+                                                selectedTime === time.time &&
+                                                selectRow === 2
+                                                    ? 'selected'
+                                                    : ''
+                                            "
+                                            (click)="clickTime(2, time.time)"
+                                            >{{ time.time }}</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <span
+                                            *ngFor="let time of timeList"
+                                            [hidden]="!time.availability"
+                                            [ngClass]="
+                                                selectedTime === time.time &&
+                                                selectRow === 3
+                                                    ? 'selected'
+                                                    : ''
+                                            "
+                                            (click)="clickTime(3, time.time)"
+                                            >{{ time.time }}</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <span
+                                            *ngFor="let time of timeList"
+                                            [hidden]="!time.availability"
+                                            [ngClass]="
+                                                selectedTime === time.time &&
+                                                selectRow === 4
+                                                    ? 'selected'
+                                                    : ''
+                                            "
+                                            (click)="clickTime(4, time.time)"
+                                            >{{ time.time }}</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <span
+                                            *ngFor="let time of timeList"
+                                            [hidden]="!time.availability"
+                                            [ngClass]="
+                                                selectedTime === time.time &&
+                                                selectRow === 5
+                                                    ? 'selected'
+                                                    : ''
+                                            "
+                                            (click)="clickTime(5, time.time)"
+                                            >{{ time.time }}</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <span
+                                            *ngFor="let time of timeList"
+                                            [hidden]="!time.availability"
+                                            [ngClass]="
+                                                selectedTime === time.time &&
+                                                selectRow === 6
+                                                    ? 'selected'
+                                                    : ''
+                                            "
+                                            (click)="clickTime(6, time.time)"
+                                            >{{ time.time }}</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <span
+                                            *ngFor="let time of timeList"
+                                            [hidden]="!time.availability"
+                                            [ngClass]="
+                                                selectedTime === time.time &&
+                                                selectRow === 7
+                                                    ? 'selected'
+                                                    : ''
+                                            "
+                                            (click)="clickTime(7, time.time)"
+                                            >{{ time.time }}</span
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div
                                 class="error-message"
                                 *ngIf="
-                                    form.get('Doctor')?.hasError('required') &&
-                                    form.get('Doctor')?.touched
+                                    timeErrorShow === false &&
+                                    nextClicked === true
                                 "
                             >
-                                Please Select a Doctor
+                                Please Select Date and Time
                             </div>
-                    <div *ngIf="selectedDoctor">
+                        </div>
+                    </form>
+                    <div class="button-area">
+                        <button class="default-btn" matStepperPrevious>
+                            Back
+                        </button>
+                        <button
+                            class="default-btn"
+                            (click)="nextClicked = true"
+                            matStepperNext
+                        >
+                            Next
+                        </button>
+                    </div>
+                </mat-step>
+                <mat-step class="appointment-area">
+                    <ng-template matStepLabel>Booking Confirmation</ng-template>
+
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12 details">
+                            <h4 class="no-padding">Details</h4>
+                            <p>Name: {{ form.value.Name }}</p>
+                            <p>Email: {{ form.value.Email }}</p>
+                            <p>Phone: {{ form.value.Phone }}</p>
+
+                            <p>
+                                Date:
+                                {{
+                                    dateFormGroup.value.date
+                                        | date : "d MMM YYYY"
+                                }}
+                            </p>
+                            <p>Time: {{ dateFormGroup.value.time }}</p>
+                            <p>Message: {{ form.value.Message }}</p>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="appointment-doctor">
+                                <h4 class="no-padding">Doctor</h4>
+                                <div class="doctor-card">
+                                    <a
+                                        routerLink="/doctor-details/{{
+                                            doctor.id
+                                        }}"
+                                        class="d-block"
+                                    >
+                                        <img
+                                            src="assets/images/doctor/{{
+                                                doctor.image
+                                            }}"
+                                        />
+                                    </a>
+                                    <div class="doctor-content">
+                                        <h3>
+                                            <a
+                                                routerLink="/doctor-details/{{
+                                                    doctor.id
+                                                }}"
+                                                >{{ doctor.name }}</a
+                                            >
+                                        </h3>
+                                        <span>{{ doctor.specialist }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="default-btn" routerLink="/appointment">
+                            Book an Appointment
+                        </button>
+                    </div>
+                </mat-step>
+            </mat-stepper>
+        </div>
+    </div>
+
+    <ng-template #template>
+        <div class="modal-header">
+            <h4>Doctors</h4>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <div class="row">
+                    <div
+                        *ngFor="let doctor of doctorLists"
+                        class="col-lg-4 col-sm-6"
+                    >
                         <div class="doctor-card">
                             <a
-                                routerLink="/doctor-details/{{ doctor.id }}"
+                                routerLink="/appointment/{{ doctor.id }}"
                                 class="d-block"
+                                (click)="modalRef.hide()"
                             >
                                 <img
                                     src="assets/images/doctor/{{
@@ -167,9 +440,10 @@
                             <div class="doctor-content">
                                 <h3>
                                     <a
-                                        routerLink="/doctor-details/{{
+                                        routerLink="/appointment/{{
                                             doctor.id
                                         }}"
+                                        (click)="modalRef.hide()"
                                         >{{ doctor.name }}</a
                                     >
                                 </h3>
@@ -178,83 +452,32 @@
                                     <button
                                         type="button"
                                         class="default-btn"
-                                        (click)="openDoctorDialog(template)"
+                                        routerLink="/appointment/{{
+                                            doctor.id
+                                        }}"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{
+                                            exact: true
+                                        }"
+                                        (click)="modalRef.hide()"
                                     >
-                                        Change Doctor
+                                        Book Appointment
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="button-area">
-                        <button
-                            *ngIf="!selectedDoctor"
-                            type="button"
-                            class="default-btn"
-                            (click)="openDoctorDialog(template)"
-                        >
-                            Select a Doctor
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="modal-footer">
+            <button
+                type="button"
+                class="btn btn-default"
+                (click)="modalRef.hide()"
+            >
+                Close
+            </button>
+        </div>
+    </ng-template>
 </div>
-
-<ng-template #template>
-    <div class="modal-header">
-        <h4>Doctors</h4>
-    </div>
-    <div class="modal-body">
-        <div class="container">
-            <div class="row">
-                <div
-                    *ngFor="let doctor of doctorLists"
-                    class="col-lg-4 col-sm-6"
-                >
-                    <div class="doctor-card">
-                        <a
-                            routerLink="/appointment/{{doctor.id}}"
-                            class="d-block"
-                            (click)="modalRef.hide()"
-                        >
-                            <img
-                                src="assets/images/doctor/{{ doctor.image }}"
-                            />
-                        </a>
-                        <div class="doctor-content">
-                            <h3>
-                                <a
-                                    routerLink="/appointment/{{doctor.id}}"
-                                    (click)="modalRef.hide()"
-                                    >{{ doctor.name }}</a
-                                    
-                                >
-                            </h3>
-                            <span>{{ doctor.specialist }}</span>
-                            <div>
-                                <button
-                                    type="button"
-                                    class="default-btn"
-                                    routerLink="/appointment/{{doctor.id}}"
-                                    routerLinkActive="active"
-                                    [routerLinkActiveOptions]="{ exact: true }"
-                                    (click)="modalRef.hide()"
-                                >
-                                    Book Appointment
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default" (click)="modalRef.hide()">
-            Close
-        </button>
-    </div>
-</ng-template>

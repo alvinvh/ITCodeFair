@@ -38,6 +38,11 @@
                             Book An Appointment
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a routerLink="/user-dashboard" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            User Dashboard
+                        </a>
+                    </li>
                 </ul>
                 
                 <div class="others-option d-flex align-items-center">
@@ -50,8 +55,20 @@
                         <a *ngIf="login.isAuthenticated() != true" routerLink="/login" class="default-btn two">
                             Login
                         </a>
-                        <a *ngIf="login.isAuthenticated()  === true" (click)="logout()" class="default-btn two">
-                            Logout
+                        <a class="user-icon-a" *ngIf="login.isAuthenticated()  === true">
+                            <img src="../../../../../assets/images/user/user.png" class="user-icon">
+                            <ul class="dropdown-menu-user">
+                                <li class="user-icon-nav">
+                                    <a routerLink="/user-dashboard" class="user-icon-nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="user-icon-nav">
+                                    <a (click)="logout()" routerLink="/index" class="user-icon-nav-link">
+                                        Logout
+                                    </a>
+                                </li>
+                                </ul>
                         </a>
                     </div>
                 </div>

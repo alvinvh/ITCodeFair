@@ -7,11 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./appointment-page.component.scss']
 })
 export class AppointmentPageComponent implements OnInit {
-  doctorID:any;
+  doctorID:any = NaN;
   constructor(private route : ActivatedRoute) { }
 
   ngOnInit(): void {
     this.doctorID = this.route.snapshot.paramMap.get('id');
+    console.log(this.doctorID)
   }
   
 }

@@ -1,0 +1,53 @@
+<div class="page-banner-area ptb-100">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>Patient Dashboard</h2>
+            <ul class="pages-list">
+                <li><a routerLink="/index">Home</a></li>
+                <li>Dashboard</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-lg-4 col-xl-3">
+            <div class="stickybar">
+                <div class="profile-sidebar">
+                    <div class="profile-info-widget">
+                        <a class="dashboard-img">
+                            <img
+                                src="../../../../assets/images/user/user.png"
+                                class="user-image"
+                            />
+                        </a>
+                        <h4>{{ username }}</h4>
+                    </div>
+                    <div class="dashboard-widget">
+                        <nav class="dashboard-menu">
+                            <ul>
+                                <li>
+                                    <a routerLinkActive="active" routerLink="/user-dashboard"
+                                        ><i class="flaticon-071-receipt"></i
+                                        ><span>Dashboard</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a routerLinkActive="active" (click)="logout()" routerLink="/index"
+                                        ><i class="flaticon-036-close"></i
+                                        ><span>Logout</span></a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 col-lg-8 col-xl-9"><div class="card">
+            <div class="card-body pt-0"><app-table [title]="title" [data]="data" [header]="header"></app-table></div>
+            
+        </div></div>
+    </div>
+</div>
