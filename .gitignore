@@ -16,9 +16,6 @@
 # Mono auto generated files
 mono_crash.*
 
-DataAccessLayer/bin/
-DataAccessLayer/obj/
-
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
