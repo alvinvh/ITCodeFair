@@ -9,6 +9,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.editorconfig
+*.cache
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -32,6 +34,18 @@ bld/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
+
+# Build results in DataAccessLayer folder 
+DataAccessLayer/[Bb]in/
+DataAccessLayer/[Oo]bj/
+
+# Build results in BusinessLogicLayer folder 
+BusinessLogicLayer/[Bb]in/
+BusinessLogicLayer/[Oo]bj/
+
+# Build results in WebApplicationLayer folder 
+WebApplicationLayer/[Bb]in/
+WebApplicationLayer/[Oo]bj/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
