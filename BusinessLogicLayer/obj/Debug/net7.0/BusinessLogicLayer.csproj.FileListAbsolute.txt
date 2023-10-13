@@ -13,3 +13,20 @@ D:\Code Fair Project .NET\ITCodeFair\BusinessLogicLayer\obj\Debug\net7.0\Busines
 D:\Code Fair Project .NET\ITCodeFair\BusinessLogicLayer\obj\Debug\net7.0\refint\BusinessLogicLayer.dll
 D:\Code Fair Project .NET\ITCodeFair\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.pdb
 D:\Code Fair Project .NET\ITCodeFair\BusinessLogicLayer\obj\Debug\net7.0\ref\BusinessLogicLayer.dll
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.deps.json
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.runtimeconfig.json
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.dll
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\bin\Debug\net7.0\BusinessLogicLayer.pdb
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\bin\Debug\net7.0\DataAccessLayer.dll
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\bin\Debug\net7.0\DataAccessLayer.pdb
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.dll
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\refint\BusinessLogicLayer.dll
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.pdb
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\BusinessLogicLayer.genruntimeconfig.cache
+C:\Users\HP\Documents\CodeFairProject\BusinessLogicLayer\obj\Debug\net7.0\ref\BusinessLogicLayer.dll

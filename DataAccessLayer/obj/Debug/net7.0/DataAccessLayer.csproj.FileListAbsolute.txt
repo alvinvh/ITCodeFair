@@ -10,3 +10,17 @@ D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\obj\Debug\net7.0\DataAccess
 D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\obj\Debug\net7.0\refint\DataAccessLayer.dll
 D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.pdb
 D:\Code Fair Project .NET\ITCodeFair\DataAccessLayer\obj\Debug\net7.0\ref\DataAccessLayer.dll
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.deps.json
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.runtimeconfig.json
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.dll
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.pdb
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.dll
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\refint\DataAccessLayer.dll
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.pdb
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\ref\DataAccessLayer.dll
+C:\Users\HP\Documents\CodeFairProject\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.csproj.AssemblyReference.cache
