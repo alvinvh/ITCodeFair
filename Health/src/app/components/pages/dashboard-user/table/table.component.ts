@@ -20,6 +20,7 @@ export class TableComponent implements AfterViewInit {
     @Input() header: any;
     @ViewChild(MatSort) sort!: MatSort;
     @ViewChild(MatPaginator) paginator!: MatPaginator;
+    header2:any;
     searchValue = '';
     listData: any;
     constructor(private _liveAnnouncer: LiveAnnouncer) {}
@@ -27,10 +28,12 @@ export class TableComponent implements AfterViewInit {
         this.data.filter = this.searchValue.trim().toLocaleLowerCase();
     }
     ngAfterViewInit(): void {
-        this.header.push('Action');
+        this.header2 = [...this.header];
+        this.header2.push('Action');
         this.data = new MatTableDataSource(this.data);
         this.data.sort = this.sort;
         this.data.paginator = this.paginator;
+        console.log(this.header)
     }
     announceSortChange(sortState: Sort) {
         if (sortState.direction) {

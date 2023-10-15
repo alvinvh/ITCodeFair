@@ -44,6 +44,7 @@ import { TableComponent } from './components/pages/dashboard-user/table/table.co
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { EditProfileComponent } from './components/pages/dashboard-user/edit-profile/edit-profile.component';
 
 @NgModule({
     declarations: [
@@ -70,6 +71,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         DoctorDetailsPageComponent,
         DashboardUserComponent,
         TableComponent,
+        EditProfileComponent,
     ],
     imports: [
         BrowserModule,

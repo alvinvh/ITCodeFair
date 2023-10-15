@@ -28,13 +28,41 @@
                         <nav class="dashboard-menu">
                             <ul>
                                 <li>
-                                    <a routerLinkActive="active" routerLink="/user-dashboard"
+                                    <a
+                                    (click)="menu = 'appointment'"
+                                    [ngClass]="{'active': menu === 'appointment'}"
                                         ><i class="flaticon-071-receipt"></i
-                                        ><span>Dashboard</span></a
+                                        ><span>Appointment</span></a
                                     >
                                 </li>
                                 <li>
-                                    <a routerLinkActive="active" (click)="logout()" routerLink="/index"
+                                    <a
+                                    (click)="menu = 'prescription'"
+                                    [ngClass]="{'active': menu === 'prescription'}"
+                                        ><i class="flaticon-095-medicine"></i
+                                        ><span>Prescription</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                    (click)="menu = 'records'"
+                                    [ngClass]="{'active': menu === 'records'}"
+                                        ><i class="flaticon-088-medical-app"></i
+                                        ><span>Medical Records</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                    (click)="menu = 'profile'"
+                                    [ngClass]="{'active': menu === 'profile'}"
+                                        ><i class="flaticon-042-user"></i
+                                        ><span>Edit Profile</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        (click)="logout()"
+                                        routerLink="/index"
                                         ><i class="flaticon-036-close"></i
                                         ><span>Logout</span></a
                                     >
@@ -45,9 +73,17 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-7 col-lg-8 col-xl-9"><div class="card">
-            <div class="card-body pt-0"><app-table [title]="title" [data]="data" [header]="header"></app-table></div>
-            
-        </div></div>
+        <div class="col-md-7 col-lg-8 col-xl-9">
+            <div class="card">
+                <div class="card-body pt-0">
+                    <app-table *ngIf="menu ==='appointment'"
+                        [title]="'Appointment'"
+                        [data]="data"
+                        [header]="header"
+                    ></app-table>
+                    <app-edit-profile *ngIf="menu === 'profile'"></app-edit-profile>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
