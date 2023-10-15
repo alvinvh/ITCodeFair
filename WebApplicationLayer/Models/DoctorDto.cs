@@ -1,4 +1,4 @@
-﻿
+﻿using CommonInfrastructure.Models;
 
 namespace WebApplicationLayer.Models
 {

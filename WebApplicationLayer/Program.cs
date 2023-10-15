@@ -20,6 +20,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     };
 });
 
+BusinessLogicLayer.Ioc.Init.InitializeDependencies(builder.Services, builder.Configuration); 
+DataAccessLayer.Ioc.Init.InitializeDependencies(builder.Services, builder.Configuration);
 
 builder.Services.AddControllersWithViews();
 

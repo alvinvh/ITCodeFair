@@ -4,13 +4,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApplicationLayer.Models;
 
-
-namespace WebApplicationLayer.Controllers
+namespace WebApplication3tierApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
-    public class DoctorController : BaseController
+    public class DoctorController : ControllerBase
     {
 
         private readonly IDoctorService _DoctorService;
@@ -48,11 +47,6 @@ namespace WebApplicationLayer.Controllers
         {
             await _DoctorService.UpdateDoctor(requestDto.ToDoctorModel());
             return Ok();
-        }
-
-        private IActionResult Ok()
-        {
-            throw new NotImplementedException();
         }
 
         [HttpDelete, Route("{DoctorId}")]

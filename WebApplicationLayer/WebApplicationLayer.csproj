@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj" />
+    <ProjectReference Include="..\CommonInfrastructure\CommonInfrastructure.csproj" />
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
   </ItemGroup>
 

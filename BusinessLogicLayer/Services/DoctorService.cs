@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer.Interfaces;
 using BusinessLogicLayer.Interfaces;
+using CommonInfrastructure.Models;
 
 namespace BusinessLogicLayer.Services
 {
