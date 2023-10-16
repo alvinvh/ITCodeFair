@@ -10,6 +10,7 @@ h4 {
 .mat-mdc-cell,
 .mat-mdc-header-cell {
     border-bottom: 1px solid #f0f0f0 !important;
+    vertical-align: middle;
 }
 .search-div {
     position: relative;
@@ -38,12 +39,54 @@ h4 {
         }
     }
 }
+.scroll-table{
+    overflow-x: auto;
+}
 .table-container {
     margin: 20px;
+    
 
     .mat-mdc-table {
         border-radius: 6px;
         border: 1px solid #f0f0f0;
         z-index: 1;
     }
+}
+.table-action {
+    min-width: 130px;
+    .button-print {
+        background-color: #1194f71f !important;
+        color: #2196f3 !important;
+        padding-inline: 0.5rem;
+        border-radius: 6px;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        margin-inline: 0.2 rem;
+        i {
+            display: inline;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 2px;
+        }
+    }
+    .button-view {
+        background-color: #02b6b31f !important;
+        color: #1db9aa !important;
+        padding-inline: 0.5rem;
+        border-radius: 6px;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        margin-inline: 0.2rem;
+        i {
+            display: inline;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 2px;
+        }
+    }
+}
+.mat-mdc-row:hover{
+    background-color: #f3f3f3e3 !important;
 }
