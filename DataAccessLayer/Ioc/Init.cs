@@ -19,8 +19,9 @@ namespace DataAccessLayer.Ioc
             //services.AddScoped<IUserDal, UserDal>();
             
             services.AddScoped<IDoctorDal, DoctorDal>();
-            
-            
+            services.AddScoped<IAppointmentDal, AppointmentDal>();
+
+
 
         }
     }

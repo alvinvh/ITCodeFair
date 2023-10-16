@@ -11,64 +11,64 @@ using CommonInfrastructure.Models;
 
 namespace DataAccessLayer.Services
 {
-    public class DoctorDal : IDoctorDal
+    public class AppointmentDal : IAppointmentDal
     {
         //private readonly TestDBEntities context;
         private DBEntitiesContext _db;
-        public DoctorDal(DBEntitiesContext dbctx)
+        public AppointmentDal(DBEntitiesContext dbctx)
         {
             this._db = dbctx; // new TestDBEntities();
         }
 
 
-        public List<DoctorModel> GetAll()
+        public List<AppointmentModel> GetAll()
         {
-            var result = _db.Doctors.ToList();
+            var result = _db.Appointments.ToList();
 
-            var returnObject = new List<DoctorModel>();
+            var returnObject = new List<AppointmentModel>();
             foreach (var item in result)
             {
-                returnObject.Add(item.ToDoctorModel());
+                returnObject.Add(item.ToAppointmentModel());
             }
 
             return returnObject;
         }
 
-        public DoctorModel? GetById(int DoctorId)
+        public AppointmentModel? GetById(int AppointmentId)
         {
-            var result = _db.Doctors.SingleOrDefault(x => x.DoctorId == DoctorId);
-            return result?.ToDoctorModel();
+            var result = _db.Appointments.SingleOrDefault(x => x.AppointmentId == AppointmentId);
+            return result?.ToAppointmentModel();
         }
 
 
-        public int CreateDoctor(DoctorModel Doctor)
+        public int CreateAppointment(AppointmentModel Appointment)
         {
-            var newDoctor = Doctor.ToDoctor();
-            _db.Doctors.Add(newDoctor);
+            var newAppointment = Appointment.ToAppointment();
+            _db.Appointments.Add(newAppointment);
             _db.SaveChanges();
-            return newDoctor.DoctorId;
+            return newAppointment.AppointmentId;
         }
 
 
-        public void UpdateDoctor(DoctorModel Doctor)
+        public void UpdateAppointment(AppointmentModel Appointment)
         {
-            var existingDoctor = _db.Doctors
-                .SingleOrDefault(x => x.DoctorId == Doctor.DoctorId);
+            var existingAppointment = _db.Appointments
+                .SingleOrDefault(x => x.AppointmentId == Appointment.AppointmentId);
 
-            if (existingDoctor == null)
+            if (existingAppointment == null)
             {
-                throw new ApplicationException($"Doctor {Doctor.DoctorId} does not exist.");
+                throw new ApplicationException($"Appointment {Appointment.AppointmentId} does not exist.");
             }
-            Doctor.ToDoctor(existingDoctor);
+            Appointment.ToAppointment(existingAppointment);
 
-            _db.Update(existingDoctor);
+            _db.Update(existingAppointment);
             _db.SaveChanges();
         }
 
-        public void DeleteDoctor(int DoctorId)
+        public void DeleteAppointment(int AppointmentId)
         {
-            var efModel = _db.Doctors.Find(DoctorId);
-            _db.Doctors.Remove(efModel);
+            var efModel = _db.Appointments.Find(AppointmentId);
+            _db.Appointments.Remove(efModel);
             _db.SaveChanges();
 
 
