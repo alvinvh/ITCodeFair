@@ -17,7 +17,6 @@ import { DatePipe } from '@angular/common';
     selector: 'app-appointment',
     templateUrl: './appointment.component.html',
     styleUrls: ['./appointment.component.scss'],
-   
 })
 export class AppointmentComponent implements OnInit {
     @Input() selectedDoctor = null;
@@ -91,29 +90,26 @@ export class AppointmentComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.minDate.setDate(this.minDate.getDate() + 1)
-        this.doctorLists = this.doctorList.getDoctorsList();
+        this.minDate.setDate(this.minDate.getDate() + 1);
+        this.doctorList
+            .getDoctorsList()
+            .subscribe((x) => (this.doctorLists = x));
         this.maxDate.setDate(this.minDate.getDate() + 7);
-            this.maxDateFormatted = this.maxDate.toLocaleDateString('en-US', {
-                month: 'short',
-                day: 'numeric',
-            });
+        this.maxDateFormatted = this.maxDate.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+        });
         if (this.selectedDoctor != null) {
             this.activatedRoute.params.subscribe((params) => {
                 this.selectedDoctor = params['id'];
                 this.DoctorDetails(Number(this.selectedDoctor));
             });
-            
         }
     }
 
     DoctorDetails(id: number) {
-        for (let doctor of this.doctorList.getDoctorsList()) {
-            if (doctor.id === id) {
-                this.doctor = doctor;
-                this.form.patchValue({ Doctor: id });
-            }
-        }
+        this.doctorList.getDoctor(id).subscribe((x) => (this.doctor = x));
+        this.form.patchValue({ Doctor: id });
     }
 
     openDoctorDialog(template: TemplateRef<any>) {
@@ -154,6 +150,5 @@ export class AppointmentComponent implements OnInit {
         const newValues = { date: this.dayList[selectDate], time: selectTime };
         this.dateFormGroup.setValue(newValues);
         this.dateFormGroup.removeValidators(Validators.required);
-        console.log(this.dateFormGroup.getRawValue());
     }
 }

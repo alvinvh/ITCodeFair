@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -97,7 +98,14 @@ export class DoctorsListService {
   ];
 
   getDoctorsList(){
-    return this.doctorsList;
+    return this.http.get('https://localhost:7258/api/Doctor', {
+      withCredentials: false,
+    });
   }
-  constructor() { }
+  getDoctor(id:number){
+    return this.http.get('https://localhost:7258/api/Doctor/' + id, {
+      withCredentials: false,
+    });
+  }
+  constructor(private http: HttpClient) { }
 }

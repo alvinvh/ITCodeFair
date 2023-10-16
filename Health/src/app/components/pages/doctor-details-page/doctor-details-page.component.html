@@ -20,14 +20,14 @@
         <div class="row align-items-center">
             <div class="col-lg-5 col-md-12">
                 <div class="doctor-details-image">
-                    <img src="assets/images/doctor/{{doctorDetails.image}}" alt="image">
+                    <img src="assets/images/doctor/{{doctorDetails.image_url}}" alt="image">
                 </div>
             </div>
             <div class="col-lg-7 col-md-12">
                 <div class="doctor-details-content">
-                    <h3>{{doctorDetails.name}}</h3>
+                    <h3>{{doctorDetails.doctorName}}</h3>
                     <span class="designation">{{doctorDetails.specialist}}</span>
-                    <button type="button" class="default-btn" routerLink="/appointment/{{doctorDetails.id}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <button type="button" class="default-btn" routerLink="/appointment/{{doctorDetails.doctorId}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                         Book Appointment
                     </button>
                     <div class="content-overview">

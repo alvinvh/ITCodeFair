@@ -9,7 +9,7 @@ import { DoctorsListService } from '../../services/doctors-list.service';
 export class DoctorsPageComponent implements OnInit {
   doctorList : any;
   constructor(doctorsList:DoctorsListService) {
-    this.doctorList = doctorsList.getDoctorsList();
+    doctorsList.getDoctorsList().subscribe((x)=>{this.doctorList = x});
    }
 
   ngOnInit(): void {
