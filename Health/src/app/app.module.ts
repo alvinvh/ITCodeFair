@@ -36,6 +36,7 @@ import { DoctorsPageComponent } from './components/pages/doctors-page/doctors-pa
 import { DoctorDetailsPageComponent } from './components/pages/doctor-details-page/doctor-details-page.component';
 import { AppointmentDoctorComponent } from './components/common/appointment-doctor/appointment-doctor.component';
 import { DoctorDialogComponent } from './components/common/appointment-doctor/doctor-dialog/doctor-dialog.component';
+import { SignInComponent } from './signin/signin.component';
 
 @NgModule({
     declarations: [
@@ -62,6 +63,7 @@ import { DoctorDialogComponent } from './components/common/appointment-doctor/do
         DoctorDetailsPageComponent,
         AppointmentDoctorComponent,
         DoctorDialogComponent,
+        SignInComponent,
     ],
     imports: [
         BrowserModule,
