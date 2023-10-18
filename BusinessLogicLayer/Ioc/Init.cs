@@ -13,6 +13,7 @@ namespace BusinessLogicLayer.Ioc
             // Services
             services.AddScoped<IDoctorService, DoctorService>();
             services.AddScoped<IAppointmentService, AppointmentService>();
+            services.AddScoped<IMedicalRecordService, MedicalRecordService>();
 
 
         }

@@ -20,6 +20,7 @@ namespace DataAccessLayer.Ioc
             
             services.AddScoped<IDoctorDal, DoctorDal>();
             services.AddScoped<IAppointmentDal, AppointmentDal>();
+            services.AddScoped<IMedicalRecordDal, MedicalRecordDal>();
 
 
 
