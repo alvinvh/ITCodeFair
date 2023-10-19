@@ -9,7 +9,7 @@ namespace WebApplicationLayer.Models
         public DateTime Date_Time { get; set; }
         public string Topic { get; set; }
         public string Description { get; set; } // nvarchar(400)
-        public int DoctorId { get; set; } // nvarchar(400)
+        public int DoctorId { get; set; }
 
     }
 

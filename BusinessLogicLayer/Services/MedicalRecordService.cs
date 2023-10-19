@@ -19,9 +19,9 @@ namespace BusinessLogicLayer.Services
             // _MedicalRecordBalService = balsvc;
         }
 
-        public async Task<MedicalRecordModel?> GetById(int MedicalRecordId)
+        public async Task<List<MedicalRecordModel>?> GetById(int UserId)
         {           
-            return _MedicalRecordDal.GetById(MedicalRecordId);
+            return _MedicalRecordDal.GetById(UserId);
         }
 
         public async Task<List<MedicalRecordModel>> GetAll()
