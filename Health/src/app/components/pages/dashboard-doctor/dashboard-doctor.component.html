@@ -90,6 +90,12 @@
                         *ngIf="menu === 'profile'"
                         [doctorDetails]="doctorDetails"
                     ></app-edit-profile-doctor>
+                    <app-table *ngIf="menu ==='records'"
+                        [title]="'Patient Medical Records'"
+                        [data]="data"
+                        [header]="header"
+                        [type]="'generic'"
+                    ></app-table>
 
         </div>
     </div>

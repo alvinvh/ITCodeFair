@@ -18,11 +18,11 @@
                     <div class="profile-info-widget">
                         <a class="dashboard-img">
                             <img
-                                src="../../../../assets/images/user/user.png"
+                                src="../../../../assets/images/user/user-1.jpg"
                                 class="user-image"
                             />
                         </a>
-                        <h4>{{ username }}</h4>
+                        <h4>Anthony Hawkins</h4>
                     </div>
                     <div class="dashboard-widget">
                         <nav class="dashboard-menu">
@@ -80,16 +80,19 @@
                         [title]="'Appointment'"
                         [data]="data"
                         [header]="header"
+                        [type]="'appointment'"
                     ></app-table>
                     <app-table *ngIf="menu ==='prescription'"
                         [title]="'Prescription'"
-                        [data]="data"
-                        [header]="header"
+                        [data]="dataPrescription"
+                        [header]="headerPrescription"
+                        [type]="'generic'"
                     ></app-table>
                     <app-table *ngIf="menu ==='records'"
                         [title]="'Medical Records'"
-                        [data]="data"
-                        [header]="header"
+                        [data]="dataRecords"
+                        [header]="headerRecords"
+                        [type]="'generic'"
                     ></app-table>
                     <app-edit-profile *ngIf="menu === 'profile'"></app-edit-profile>
                 </div>
