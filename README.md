@@ -1,16 +1,24 @@
-# TeleMediCare
+# TeleMediCare: a telemedicine platform designed for virtual care in NT
 
-TeleMediCare is a telemedicine platform designed to provide remote healthcare services to
-patients in rural and underserved communities (Australian Bureau of Statistics, 2022). The
-platform utilizes advanced technology to offer a secure and seamless online consultation
-experience, connecting patients with licensed healthcare professionals (Royal Australian
-College of General Practitioners, 2019). By harnessing the power of telemedicine,
-TeleMediCare aims to close the gap between patients and healthcare providers, enhance
-access to care, and promote better health outcomes. Moreover, telemedicine is in high demand
-all over the world. In Australia, with over 100 million telehealth services provided to around 17
-million people from March 2020 to March 2022, and the Medicare benefits for these services
-exceeded $5 billion, and more than 92,000 doctors are using telehealth to help their patients
-(Health, 2022).
+## Abstract 
+In the Northern Territory (NT), the ratio of General Practitioners to the population is 94 per 100,000 people, while Queensland boasts a higher ratio of 125.4. The NT faces critical health challenges, including the highest premature death rate, a growing prevalence of chronic illnesses, and 40% of its residents residing in remote or very remote areas, which hinder access to healthcare services. Virtual Care can help meet the need of Territorians by optimising access and quality of consumer care. Its implementation has the potential to yield significant benefits, with estimated annual travel cost savings exceeding $6.3 million, in addition to reduced cancellation expenses and enhanced healthcare accessibility. Enter TeleMediCare: a telemedicine platform designed for virtual care. The platform utilizes advanced technology to offer a secure and seamless online consultation experience, connecting patients with licensed healthcare professionals.
+
+## Feature List 
+1.	Patient healthcare profiles: Patients can create accounts on the platform, providing necessary personal information and medical history. 
+2.	Appointment Scheduling: Patients can schedule virtual appointments with healthcare providers based on their availability and specialty.
+3.	Virtual Consultations: Patients can initiate and participate in secure video consultations with healthcare providers through the platform. 
+4.	Medical records access: Patients can access their electronic health records, including past consultations, prescriptions, and medical test results.
+5.	Prescription and referral management: Patients can receive electronic prescriptions and referrals through the platform for medications or further medical care. 
+6.	Secure communication: Patients have a secure messaging system to communicate with healthcare providers for follow-up questions or non-urgent inquiries.
+
+## Technologies Used
+Database: SQL Server and SQL Server Management Studio (SSMS)
+Backend: .NET 7
+Frontend: Angular 16
+API Testing: Postman
+Version Control: GitHub
+Integrated Development Environments (IDE): Visual Studio and Visual Studio Code
+
 
 ## Users and user categories:
 
