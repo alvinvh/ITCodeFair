@@ -1,5 +1,7 @@
 # TeleMediCare: a telemedicine platform designed for virtual care in NT
 
+### Link: https://youtu.be/lKqCnYpn4CA?si=2ULDLMkNaX6aM4kV 
+
 ## Abstract 
 In the Northern Territory (NT), the ratio of General Practitioners to the population is 94 per 100,000 people, while Queensland boasts a higher ratio of 125.4. The NT faces critical health challenges, including the highest premature death rate, a growing prevalence of chronic illnesses, and 40% of its residents residing in remote or very remote areas, which hinder access to healthcare services. Virtual Care can help meet the need of Territorians by optimising access and quality of consumer care. Its implementation has the potential to yield significant benefits, with estimated annual travel cost savings exceeding $6.3 million, in addition to reduced cancellation expenses and enhanced healthcare accessibility. Enter TeleMediCare: a telemedicine platform designed for virtual care. The platform utilizes advanced technology to offer a secure and seamless online consultation experience, connecting patients with licensed healthcare professionals.
 
@@ -40,31 +42,31 @@ In the Northern Territory (NT), the ratio of General Practitioners to the popula
 
 ## Functional Requirements:
 
-1. Patients:
-   I. User Registration: Patients should be able to create accounts on the platform, providing necessary personal information and medical history.
-   II. Appointment Scheduling: Patients should have the ability to schedule virtual appointments with healthcare providers based on their availability and specialty. Patients should be able to upload their medical records.
-   III. Virtual Consultations: Patients should be able to initiate and participate in secure video consultations with healthcare providers through the platform.
-   IV. Medical Records Access: Patients should have access to their electronic health records, including past consultations, prescriptions, and medical test results.
-   V. Prescription and Referral Management: Patients should be able to receive electronic prescriptions and referrals through the platform for medications or further medical care.
+1. Patients:\
+   I. User Registration: Patients should be able to create accounts on the platform, providing necessary personal information and medical history.\
+   II. Appointment Scheduling: Patients should have the ability to schedule virtual appointments with healthcare providers based on their availability and specialty. Patients should be able to upload their medical records.\
+   III. Virtual Consultations: Patients should be able to initiate and participate in secure video consultations with healthcare providers through the platform.\
+   IV. Medical Records Access: Patients should have access to their electronic health records, including past consultations, prescriptions, and medical test results.\
+   V. Prescription and Referral Management: Patients should be able to receive electronic prescriptions and referrals through the platform for medications or further medical care.\
    VI. Secure Communication(Messaging): Patients should have a secure messaging system to communicate with healthcare providers for follow-up questions or non-urgent inquiries.
 
-2. Healthcare Providers:
-   I. Profile Creation: Healthcare providers should be able to create professional profiles on the platform, specifying their specialties and credentials.
-   II. Appointment Management: Healthcare providers should be able to view and manage their appointment schedules and reschedule or cancel appointments when needed.
-   III. Virtual Consultations: Healthcare providers should have access to a reliable and secure video conferencing system for conducting virtual consultations with patients.
-   IV. Medical Record Access: Healthcare providers should be able to access patients' electronic health records to review medical history and make informed decisions during consultations.
-   V. Prescription and Referral Issuing: Healthcare providers should be able to issue electronic prescriptions and referrals to patients as required.
+2. Healthcare Providers:\
+   I. Profile Creation: Healthcare providers should be able to create professional profiles on the platform, specifying their specialties and credentials.\
+   II. Appointment Management: Healthcare providers should be able to view and manage their appointment schedules and reschedule or cancel appointments when needed.\
+   III. Virtual Consultations: Healthcare providers should have access to a reliable and secure video conferencing system for conducting virtual consultations with patients.\
+   IV. Medical Record Access: Healthcare providers should be able to access patients' electronic health records to review medical history and make informed decisions during consultations.\
+   V. Prescription and Referral Issuing: Healthcare providers should be able to issue electronic prescriptions and referrals to patients as required.\
    VI. Telemedicine Support: Healthcare providers should have access to technical support for any telemedicine-related issues they may encounter during consultations.
 
-3. Payers:
-   I. Payment Processing: Payers should be able to process payments for telemedicine services provided by healthcare providers and reimburse them accordingly.
+3. Payers:\
+   I. Payment Processing: Payers should be able to process payments for telemedicine services provided by healthcare providers and reimburse them accordingly.\
    II. Claims Management: Payers should have a system to handle and process reimbursement claims submitted by healthcare providers for telemedicine services rendered to patients.
 
-4. TeleMediCare Employees and Administrators:
-   I. User Account Management: Employees and administrators should have the ability to manage user accounts, including patient and healthcare provider profiles.
-   II. Technical Support: Employees and administrators should provide technical support to users, assisting with any platform-related issues.
+4. TeleMediCare Employees and Administrators:\
+   I. User Account Management: Employees and administrators should have the ability to manage user accounts, including patient and healthcare provider profiles.\
+   II. Technical Support: Employees and administrators should provide technical support to users, assisting with any platform-related issues.\
    III. Compliance Monitoring: Employees and administrators should monitor and ensure adherence to regulatory guidelines and privacy policies to protect patient data and maintain compliance.
 
-5. Regulatory Bodies:
-   I. Data Compliance and Privacy: The platform should comply with all data protection and privacy regulations set by regulatory bodies to ensure patient information is secure.
+5. Regulatory Bodies:\
+   I. Data Compliance and Privacy: The platform should comply with all data protection and privacy regulations set by regulatory bodies to ensure patient information is secure.\
    II. Audit Trail: The platform should maintain an audit trail of user activities and transactions to comply with regulatory requirements and facilitate any audits if necessary.
