@@ -12,12 +12,12 @@ In the Northern Territory (NT), the ratio of General Practitioners to the popula
 6.	Secure communication: Patients have a secure messaging system to communicate with healthcare providers for follow-up questions or non-urgent inquiries.
 
 ## Technologies Used
-Database: SQL Server and SQL Server Management Studio (SSMS)
-Backend: .NET 7
-Frontend: Angular 16
-API Testing: Postman
-Version Control: GitHub
-Integrated Development Environments (IDE): Visual Studio and Visual Studio Code
+ Database: SQL Server and SQL Server Management Studio (SSMS)\
+ Backend: .NET 7\
+ Frontend: Angular 16\
+ API Testing: Postman, Swagger\
+ Version Control: GitHub\
+ Integrated Development Environments (IDE): Visual Studio and Visual Studio Code
 
 
 ## Users and user categories:
