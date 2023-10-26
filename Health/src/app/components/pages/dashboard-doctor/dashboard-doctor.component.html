@@ -1,0 +1,102 @@
+<div class="page-banner-area ptb-100">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>Doctor Dashboard</h2>
+            <ul class="pages-list">
+                <li><a routerLink="/index">Home</a></li>
+                <li>Dashboard</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-lg-4 col-xl-3">
+            <div class="stickybar">
+                <div class="profile-sidebar">
+                    <div class="profile-info-widget">
+                        <a class="dashboard-img">
+                            <img
+                                src="../../../../assets/images/doctor/{{
+                                    doctorDetails.image_url
+                                }}"
+                                class="user-image"
+                            />
+                        </a>
+                        <h4>{{ doctorDetails.doctorName }}</h4>
+                    </div>
+                    <div class="dashboard-widget">
+                        <nav class="dashboard-menu">
+                            <ul>
+                                <li>
+                                    <a
+                                        (click)="menu = 'appointment'"
+                                        [ngClass]="{
+                                            active: menu === 'appointment'
+                                        }"
+                                        ><i class="flaticon-071-receipt"></i
+                                        ><span>Appointment</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        (click)="menu = 'patients'"
+                                        [ngClass]="{
+                                            active: menu === 'patients'
+                                        }"
+                                        ><i class="flaticon-062-sick-person"></i
+                                        ><span>Patients</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        (click)="menu = 'records'"
+                                        [ngClass]="{
+                                            active: menu === 'records'
+                                        }"
+                                        ><i class="flaticon-088-medical-app"></i
+                                        ><span>Medical Records</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        (click)="menu = 'profile'"
+                                        [ngClass]="{
+                                            active: menu === 'profile'
+                                        }"
+                                        ><i class="flaticon-042-user"></i
+                                        ><span>Edit Profile</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a (click)="logout()" routerLink="/index"
+                                        ><i class="flaticon-036-close"></i
+                                        ><span>Logout</span></a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 col-lg-8 col-xl-9">
+            
+                    <app-doctor-appointment-list *ngIf="menu === 'appointment'"></app-doctor-appointment-list>
+                    <app-doctor-patient-list *ngIf="menu === 'patients'"></app-doctor-patient-list>
+                    
+                    <app-edit-profile-doctor
+                        *ngIf="menu === 'profile'"
+                        [doctorDetails]="doctorDetails"
+                    ></app-edit-profile-doctor>
+                    <app-table *ngIf="menu ==='records'"
+                        [title]="'Patient Medical Records'"
+                        [data]="data"
+                        [header]="header"
+                        [type]="'generic'"
+                    ></app-table>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+.card{
+    display: flex;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 1.875rem;
+    .card-body{
+        flex: 1 1 auto;
+        padding: 1.5rem;
+        display: block;
+        .widget{
+            border-bottom: 1px solid #f0f0f0;
+            text-align: center;
+            .widget-info{
+                display: block!important;
+                text-align: center!important;
+                a{
+                    display: inline-block;
+                    width: auto;
+                    background-color: #f7f7f7;
+                    margin: 0 0 15px!important;
+                    border-radius: 50%;
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                .profile-info{
+                    h3{
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                        margin-bottom: 8px;
+                    }
+                    .patient-details{
+                        h5{
+                            color: #757575;
+                            font-size: 0.75rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+        .patient-info{
+            margin-top: 5px;
+            ul{
+                list-style: none;
+                font-size: .875rem;
+                margin: 0;
+                padding: 0;
+                li{
+                    position: relative;
+                    font-size: .875rem;
+                    font-weight: 500;
+                    color: #272b41;
+                    span{
+                        color: #757575;
+                        float: right;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+.row{
+    margin-block: 20px;
+}

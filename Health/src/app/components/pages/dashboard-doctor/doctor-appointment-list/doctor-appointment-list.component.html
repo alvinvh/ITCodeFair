@@ -1,0 +1,20 @@
+<div class="appointment-list" *ngFor="let patient of patients">
+    <div class="profile-info">
+        <a class="booking-patient-img">
+            <img src="../../../../../assets/images/user/{{patient.image_url}}">
+        </a>
+        <div class="profile-detail">
+            <h3>{{patient.patientName}}</h3>
+            <div class="details">
+                <h5>{{patient.time}}</h5>
+                <h5>{{patient.patientEmail}}</h5>
+                <h5>{{patient.phoneNumber}}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="appointment-action">
+        <a class="button view-btn">View</a>
+        <a class="button accept-btn">Accept</a>
+        <a class="button cancel-btn">Cancel</a>
+    </div>
+</div>

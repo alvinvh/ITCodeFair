@@ -1,0 +1,28 @@
+<div class="row row-grid">
+    <div *ngFor="let patient of patients" class="col-md-6 col-lg-4 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="widget">
+                    <div class="widget-info">
+                        <a>
+                           <img src="../../../../../assets/images/user/{{patient.image_url}}"> 
+                        </a>
+                        <div class="profile-info">
+                            <h3>{{patient.patientName}}</h3>
+                            <div class="patient-details">
+                                <h5><b>Patient ID : </b>{{patient.patientId}}</h5>
+                                <h5>{{patient.patientEmail}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="patient-info">
+                    <ul>
+                        <li>Phone<span>{{patient.phoneNumber}}</span></li>
+                        <li>Gender<span>{{patient.gender}}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

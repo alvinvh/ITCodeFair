@@ -45,6 +45,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { EditProfileComponent } from './components/pages/dashboard-user/edit-profile/edit-profile.component';
+import { DashboardDoctorComponent } from './components/pages/dashboard-doctor/dashboard-doctor.component';
+import { EditProfileDoctorComponent } from './components/pages/dashboard-doctor/edit-profile-doctor/edit-profile-doctor.component';
+import { DoctorAppointmentListComponent } from './components/pages/dashboard-doctor/doctor-appointment-list/doctor-appointment-list.component';
+import { DoctorPatientListComponent } from './components/pages/dashboard-doctor/doctor-patient-list/doctor-patient-list.component';
 
 @NgModule({
     declarations: [
@@ -72,6 +76,10 @@ import { EditProfileComponent } from './components/pages/dashboard-user/edit-pro
         DashboardUserComponent,
         TableComponent,
         EditProfileComponent,
+        DashboardDoctorComponent,
+        EditProfileDoctorComponent,
+        DoctorAppointmentListComponent,
+        DoctorPatientListComponent,
     ],
     imports: [
         BrowserModule,

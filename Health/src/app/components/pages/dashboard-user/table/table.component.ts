@@ -18,6 +18,7 @@ export class TableComponent implements AfterViewInit {
     @Input() title = '';
     @Input() data: any;
     @Input() header: any;
+    @Input() type: any;
     @ViewChild(MatSort) sort!: MatSort;
     @ViewChild(MatPaginator) paginator!: MatPaginator;
     header2:any;

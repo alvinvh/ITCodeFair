@@ -50,7 +50,13 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseCors(options =>
+{
+    options.AllowAnyOrigin();  // You can specify specific origins here
+    options.AllowAnyMethod();
+    options.AllowAnyHeader();
 
+});
 app.UseRouting();
 
 app.UseAuthentication();

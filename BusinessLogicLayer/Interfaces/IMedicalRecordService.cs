@@ -9,7 +9,7 @@ namespace BusinessLogicLayer.Interfaces
 {
     public interface IMedicalRecordService
     {
-        Task<MedicalRecordModel?> GetById(int MedicalRecordId);
+        Task<List<MedicalRecordModel>?> GetById(int UserId);
         Task<List<MedicalRecordModel>> GetAll();
 
         Task<int> CreateMedicalRecord(MedicalRecordModel MedicalRecord);

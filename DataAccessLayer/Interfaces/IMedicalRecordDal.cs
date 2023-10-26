@@ -10,7 +10,7 @@ namespace DataAccessLayer.Interfaces
     public interface IMedicalRecordDal
     {
         // Getters
-        MedicalRecordModel? GetById(int MedicalRecordId);
+        List<MedicalRecordModel>? GetById(int UserId);
         List<MedicalRecordModel> GetAll();
 
         // Actions

@@ -17,7 +17,7 @@
     </div>
       
   </div>
-  <div class="table-container">
+  <div class="table-container" *ngIf="type === 'generic'">
     <div class="scroll-table">
       <table
       mat-table
@@ -48,6 +48,53 @@
           <div class="table-action">
             <button class="button-view"><i class="flaticon-189-view"></i>View</button>
             <button class="button-print"><i class="flaticon-158-policy" ></i>Print</button>
+          </div>
+          
+        </td>
+      </ng-container>
+  
+      
+  
+      <tr mat-header-row *matHeaderRowDef="header2"></tr>
+      <tr mat-row  *matRowDef="let row; columns: header2"></tr>
+    </table>
+    </div>
+    
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 20]"
+    ></mat-paginator>
+  </div>
+
+  <div class="table-container" *ngIf="type === 'appointment'">
+    <div class="scroll-table">
+      <table
+      mat-table
+      [dataSource]="data"
+      matSort
+      (matSortChange)="announceSortChange($event)"
+      class="table"
+    >
+      <ng-container *ngFor="let head of header" matColumnDef="{{head}}">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+        >
+          {{head}}
+        </th>
+        <td mat-cell *matCellDef="let element" >{{ element[head] }}</td>
+      </ng-container>
+      <ng-container matColumnDef="Action">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+        >
+          Action
+        </th>
+        <td mat-cell *matCellDef="let element" >
+          <div class="table-action">
+            <button class="button-cancel">Cancel</button>
           </div>
           
         </td>

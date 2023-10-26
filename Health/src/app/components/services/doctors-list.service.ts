@@ -107,5 +107,10 @@ export class DoctorsListService {
       withCredentials: false,
     });
   }
+  updateDoctor(details:any){
+    return this.http.put('https://localhost:7258/api/Doctor/update', details,{
+      withCredentials: false,
+    });
+  }
   constructor(private http: HttpClient) { }
 }

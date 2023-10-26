@@ -67,9 +67,9 @@ export class AppointmentComponent implements OnInit {
         private datePipe: DatePipe
     ) {
         this.form = this.fb.group({
-            Name: ['', [Validators.required]],
-            Email: ['', [Validators.required, Validators.email]],
-            Phone: ['', [Validators.required]],
+            Name: ['Anthony Hawkins', [Validators.required]],
+            Email: ['Anthony.Hawkins@email.com', [Validators.required, Validators.email]],
+            Phone: ['044123456213', [Validators.required]],
             Message: ['', [Validators.required]],
             Doctor: ['', [Validators.required]],
         });

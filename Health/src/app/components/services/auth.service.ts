@@ -12,6 +12,7 @@ export class AuthService {
     if (username === "admin" && password === 'admin'){
       username = username;
       localStorage.setItem('currentUser', username);
+      localStorage.setItem('id', '1');
       this.loggedIn = true;
     };
       

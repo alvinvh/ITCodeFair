@@ -1,0 +1,149 @@
+<div class="card">
+    <div class="card-body pt-0">
+<form [formGroup]="doctorForm">
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <div class="mb-3">
+                <div class="change-img">
+                    <div class="profile-img">
+                        <img src="../../../../../assets/images/doctor/{{doctorDetails.image_url}}">
+                    </div>
+                    <div class="upload-img">
+                        <div class="upload-button">
+                            <span>Upload Photo</span>
+                            <input type="image" value="">
+                        </div>
+                        <small>Allowed JPG, GIF or PNG. Max size of 2MB</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label>Name</label>
+                    <input type="text" class="form-control" formControlName="doctorName">
+                    <div
+                                            class="error-message"
+                                            *ngIf="
+                                                doctorForm
+                                                    .get('doctorName')
+                                                    ?.hasError('required') &&
+                                                doctorForm.get('doctorName')?.touched
+                                            "
+                                        >
+                                            Please fill your name.
+                                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label>Date of Birth</label>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label>Email</label>
+                    <input type="email" class="form-control">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label>Phone</label>
+                    <input type="number" class="form-control">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label>Specialist</label>
+                    <input type="text" class="form-control" formControlName="specialist">
+                    <div
+                                            class="error-message"
+                                            *ngIf="
+                                                doctorForm
+                                                    .get('specialist')
+                                                    ?.hasError('required') &&
+                                                doctorForm.get('specialist')?.touched
+                                            "
+                                        >
+                                            Please fill your specialisation.
+                                        </div>
+            </div>
+            
+                </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label>Qualification</label>
+                    <input type="text" class="form-control"  formControlName="qualification">
+                    <div
+                                            class="error-message"
+                                            *ngIf="
+                                                doctorForm
+                                                    .get('qualification')
+                                                    ?.hasError('required') &&
+                                                doctorForm.get('qualification')?.touched
+                                            "
+                                        >
+                                            Please fill your qualification.
+                                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <label>Certification</label>
+                    <input type="text" class="form-control"  formControlName="certification">
+                    <div
+                                            class="error-message"
+                                            *ngIf="
+                                                doctorForm
+                                                    .get('certification')
+                                                    ?.hasError('required') &&
+                                                doctorForm.get('certification')?.touched
+                                            "
+                                        >
+                                            Please fill your certification.
+                                        </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="mb-3">
+                    <label>Education</label>
+                    <input type="text" class="form-control" formControlName="education">
+                    <div
+                                            class="error-message"
+                                            *ngIf="
+                                                doctorForm
+                                                    .get('education')
+                                                    ?.hasError('required') &&
+                                                doctorForm.get('education')?.touched
+                                            "
+                                        >
+                                            Please fill your education.
+                                        </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="mb-3">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="5" formControlName="description"></textarea>
+                    <div
+                                            class="error-message"
+                                            *ngIf="
+                                                doctorForm
+                                                    .get('description')
+                                                    ?.hasError('required') &&
+                                                doctorForm.get('description')?.touched
+                                            "
+                                        >
+                                            Please fill your description.
+                                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-3">
+                    <button class="save-button" (click)="onSubmit()" [disabled]="doctorForm.invalid" >Save</button>
+                </div>
+            </div>
+    </div>
+</form>
+</div></div>

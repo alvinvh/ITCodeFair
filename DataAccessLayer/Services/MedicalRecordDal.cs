@@ -34,10 +34,12 @@ namespace DataAccessLayer.Services
             return returnObject;
         }
 
-        public MedicalRecordModel? GetById(int MedicalRecordId)
+        public List<MedicalRecordModel>? GetById(int UserId)
         {
-            var result = _db.MedicalRecords.SingleOrDefault(x => x.MedicalRecordId == MedicalRecordId);
-            return result?.ToMedicalRecordModel();
+            //var result = _db.MedicalRecords.SingleOrDefault(x => x.UserId == UserId);
+            //return result?.ToMedicalRecordModel();
+            var results = _db.MedicalRecords.Where(x => x.UserId == UserId).Select(x => x.ToMedicalRecordModel()).ToList();
+            return results;
         }
 
 

@@ -28,11 +28,12 @@ namespace WebApplication3tierApp.Controllers
             return result.Select(x => x.ToMedicalRecordDto()).ToList();
         }
 
-        [HttpGet("{MedicalRecordId}", Name = "GetMedicalRecord")]
-        public async Task<MedicalRecordDto?> Get(int MedicalRecordId)
+        [HttpGet("{UserId}", Name = "GetMedicalRecord")]
+        public async Task<List<MedicalRecordDto>?> Get(int UserId)
         {
-            var result = await _MedicalRecordService.GetById(MedicalRecordId);
-            return result?.ToMedicalRecordDto();
+            var result = await _MedicalRecordService.GetById(UserId);
+            //return result?.ToMedicalRecordDto();
+           return result.Select(UserId => UserId.ToMedicalRecordDto()).ToList();
         }
 
         [HttpPost, Route("")]
