@@ -39,11 +39,11 @@
                             About Us
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a routerLink="/doctor-dashboard" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                             Doctor Dashboard
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
                 
                 <div class="others-option d-flex align-items-center">
@@ -56,7 +56,7 @@
                         <a *ngIf="login.isAuthenticated() != true" routerLink="/login" class="default-btn two">
                             Login
                         </a>
-                        <a class="user-icon-a" *ngIf="login.isAuthenticated()  === true">
+                        <a class="user-icon-a" *ngIf="login.isAuthenticated()  === true" routerLink="/user-dashboard">
                             <img src="../../../../../assets/images/user/user-1.jpg" class="user-icon">
                             <ul class="dropdown-menu-user">
                                 <li class="user-icon-nav">
